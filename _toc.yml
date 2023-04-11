@@ -4,6 +4,12 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+  - file: content/_intro/intro
+    sections:
+      - file: content/_intro/observation
+      - file: content/_intro/why_julia
+  - file: content/chapter_1/outline
+    sections:
+      - file: content/chapter_1/1_Julia_Introduction
+      - file: content/chapter_1/2_Jl_Strings
+      - file: content/chapter_1/3_Data_structures
