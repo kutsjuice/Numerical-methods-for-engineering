@@ -13,3 +13,12 @@ chapters:
       - file: content/chapter_1/1_Julia_Introduction
       - file: content/chapter_1/2_Jl_Strings
       - file: content/chapter_1/3_Data_structures
+      - file: content/chapter_1/4_Linear_Algebra
+  - file: content/chapter_4/0_chapter_4
+    sections:
+      - file: content/chapter_4/1_lu
+      - file: content/chapter_4/2_cholesky
+      - file: content/chapter_4/3_shure
+      - file: content/chapter_4/4_qr
+      - file: content/chapter_4/5_eigen
+      - file: content/chapter_4/6_svd

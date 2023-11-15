@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Основы вычислительной математики для инженеров машиностроителей с примерами на Julia
-author: Куц М. С., Чиркин А. В.
+author: Куц М. С.
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
@@ -30,3 +30,19 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+
+parse:
+  myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+    - tasklist
+  myst_dmath_allow_labels: true
+  dmath_allow_labels: true
