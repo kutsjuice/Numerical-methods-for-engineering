@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Глава 1 &#8212; Основы вычислительной математики для инженеров машиностроителей с примерами на Julia</title>
+    <title>QR разложение &#8212; Основы вычислительной математики для инженеров машиностроителей с примерами на Julia</title>
   
   
   
@@ -62,11 +62,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/chapter_1/outline';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/chapter_4/4_qr';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Вывод на печать" href="1_Julia_Introduction.html" />
-    <link rel="prev" title="Welcome to your Jupyter Book" href="../../intro.html" />
+    <link rel="next" title="Спектральное разложение" href="5_eigen.html" />
+    <link rel="prev" title="Разложение Шура" href="3_shure.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -168,8 +170,8 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Глава 1</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="1_Julia_Introduction.html">Вывод на печать</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter_1/outline.html">Глава 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_1/1_Julia_Introduction.html">Вывод на печать</a></li>
 
 
 
@@ -177,20 +179,20 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="2_Jl_Strings.html">Объявление строк</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_1/2_Jl_Strings.html">Объявление строк</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="3_Data_structures.html">Структуры данных</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4_Linear_Algebra.html">Основы линейной алгебры на Julia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_1/3_Data_structures.html">Структуры данных</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_1/4_Linear_Algebra.html">Основы линейной алгебры на Julia</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter_4/0_chapter_4.html">Глава 4</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_4/1_lu.html">LU</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_4/2_cholesky.html">Разложение Холецкого</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_4/3_shure.html">Разложение Шура</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_4/4_qr.html">QR разложение</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_4/5_eigen.html">Спектральное разложение</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_4/6_svd.html">Сингулярное разложение</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="0_chapter_4.html">Глава 4</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1_lu.html">LU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_cholesky.html">Разложение Холецкого</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_shure.html">Разложение Шура</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">QR разложение</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_eigen.html">Спектральное разложение</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_svd.html">Сингулярное разложение</a></li>
 </ul>
 </li>
 </ul>
@@ -264,7 +266,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/kutsjuice/Numerical-methods-for-engineering/issues/new?title=Issue%20on%20page%20%2Fcontent/chapter_1/outline.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/kutsjuice/Numerical-methods-for-engineering/issues/new?title=Issue%20on%20page%20%2Fcontent/chapter_4/4_qr.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -294,7 +296,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/content/chapter_1/outline.md" target="_blank"
+      <li><a href="../../_sources/content/chapter_4/4_qr.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -304,7 +306,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -374,7 +376,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Глава 1</h1>
+    <h1>QR разложение</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -388,10 +390,42 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Глава 1<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="qr">
+<h1>QR разложение<a class="headerlink" href="#qr" title="Permalink to this heading">#</a></h1>
+<p>Следующим разложением, получившим широкое распространение в прикладной вычислительной математике является QR разложение.
+QR разложение позволяет представить матрицу <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> в виде произведения ортогональной матрицы <span class="math notranslate nohighlight">\(\mathbf{Q}\)</span> и верхнетреугольной матрицы <span class="math notranslate nohighlight">\(\mathbf{R}\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\mathbf{A} = \mathbf{QR}
+\end{equation*}\]</div>
+<p>Данное разложение тесно связано с процедурой ортогонализации, позволяющей получить из некоторого произвольного базиса ортонормированный.
+Действительно, давайте представим матрицу <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> в виде набора из <span class="math notranslate nohighlight">\(N\)</span> векторов</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\mathbf{A} = \left[
+\begin{matrix}
+a_{1} &amp; a_{2} &amp; a_{3} &amp; \dots &amp; a_{N}\\ 
+\end{matrix}
+\right]
+\end{equation*}\]</div>
+<p>где <span class="math notranslate nohighlight">\(a_{i} \in \R^N\)</span></p>
+<p>Из даного набора векторов может быть легко получен ортнормированный базис <strong>Q</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+Q = \left[
+\begin{matrix}
+q_1 &amp; q_2 &amp; q_3 &amp; \dots &amp; q_N\\ 
+\end{matrix}
+\right]
+\end{equation*}\]</div>
+<p>Из курса линейной алгебры нам известно, что два вектора называются ортоногональными если их скалярное произведение равно нулю. Соответственно ддля набора векторов <strong>Q</strong> справедливо будет
+$<span class="math notranslate nohighlight">\(
+q_{i}^T q_{j} = 
+\begin{cases}
+1, &amp; \text{при \)</span>i=j<span class="math notranslate nohighlight">\(;}\\
+0, &amp; \text{при \)</span>i\not=j<span class="math notranslate nohighlight">\(.}
+\end{cases}
+\)</span>$</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -403,16 +437,16 @@ document.write(`
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "julia-1.9"
         },
         kernelOptions: {
-            name: "python3",
-            path: "./content/chapter_1"
+            name: "julia-1.9",
+            path: "./content/chapter_4"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'julia-1.9'</script>
 
                 </article>
               
@@ -425,20 +459,20 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../intro.html"
+       href="3_shure.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        <p class="prev-next-title">Разложение Шура</p>
       </div>
     </a>
     <a class="right-next"
-       href="1_Julia_Introduction.html"
+       href="5_eigen.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Вывод на печать</p>
+        <p class="prev-next-title">Спектральное разложение</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
